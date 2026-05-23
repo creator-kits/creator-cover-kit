@@ -1,6 +1,13 @@
 export type TextPosition = 'top' | 'center' | 'bottom'
 export type TextAlign = 'left' | 'center' | 'right'
-export type OverlayKind = 'none' | 'bottom-banner' | 'top-fade'
+export type ExportFormat = 'png' | 'jpg'
+export type OverlayKind =
+  | 'none'
+  | 'bottom-banner'
+  | 'top-fade'
+  | 'center-card'
+  | 'corner-label'
+  | 'fitness-impact'
 
 export interface SafeArea {
   top: number
@@ -39,13 +46,20 @@ export interface TextSettings {
   color: string
   position: TextPosition
   align: TextAlign
+  offsetX: number
+  offsetY: number
 }
 
 export interface OverlayStyle {
   kind: OverlayKind
   color: string
   opacity: number
+  accentColor?: string
+  badgeText?: string
+  signatureText?: string
+  numberText?: string
   heightRatio?: number
+  cardWidthRatio?: number
 }
 
 export interface TemplatePreset {
@@ -64,6 +78,5 @@ export interface RenderOptions {
   overlayStyle: OverlayStyle
   showSafeArea: boolean
   includeSafeArea: boolean
-  watermarkText: string
-  includeWatermark: boolean
+  format?: ExportFormat
 }

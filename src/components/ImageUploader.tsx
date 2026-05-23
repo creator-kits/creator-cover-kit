@@ -23,10 +23,10 @@ export function ImageUploader({ image, onFileSelect }: ImageUploaderProps) {
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="font-display text-xl font-semibold tracking-[-0.04em] text-ink">
-            Source image
+            上传图片
           </h2>
           <p className="mt-1 text-sm leading-6 text-slate-600">
-            JPG, PNG, or WebP. Everything stays in your browser.
+            支持 JPG、PNG、WebP。所有图片只在本地浏览器中处理。
           </p>
         </div>
         {image && (
@@ -44,12 +44,12 @@ export function ImageUploader({ image, onFileSelect }: ImageUploaderProps) {
             </div>
             <div className="flex-1">
               <div className="font-display text-lg font-semibold text-ink">
-                {image ? 'Replace image' : 'Upload an image'}
+                {image ? '重新选择图片' : '上传一张图片'}
               </div>
               <div className="mt-1 text-sm leading-6 text-slate-600">
                 {image
-                  ? `Current file: ${image.name}`
-                  : 'Upload one image and create covers for multiple platforms.'}
+                  ? `当前文件：${image.name}`
+                  : '上传一次，快速生成多个平台的封面图。'}
               </div>
             </div>
           </div>

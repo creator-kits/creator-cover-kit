@@ -27,7 +27,7 @@ export const platformPresets: PlatformPreset[] = [
   },
   {
     id: 'tiktok-cover',
-    name: 'TikTok vertical cover',
+    name: 'TikTok 竖版封面',
     width: 1080,
     height: 1920,
     aspectRatioLabel: '9:16',
@@ -35,7 +35,7 @@ export const platformPresets: PlatformPreset[] = [
   },
   {
     id: 'youtube-thumbnail',
-    name: 'YouTube thumbnail',
+    name: 'YouTube 缩略图',
     width: 1280,
     height: 720,
     aspectRatioLabel: '16:9',
@@ -43,7 +43,7 @@ export const platformPresets: PlatformPreset[] = [
   },
   {
     id: 'instagram-square',
-    name: 'Instagram post square',
+    name: 'Instagram 方图',
     width: 1080,
     height: 1080,
     aspectRatioLabel: '1:1',
@@ -51,7 +51,7 @@ export const platformPresets: PlatformPreset[] = [
   },
   {
     id: 'instagram-reel-cover',
-    name: 'Instagram reel cover',
+    name: 'Instagram Reel 封面',
     width: 1080,
     height: 1920,
     aspectRatioLabel: '9:16',
@@ -59,7 +59,7 @@ export const platformPresets: PlatformPreset[] = [
   },
   {
     id: 'pinterest-pin',
-    name: 'Pinterest pin',
+    name: 'Pinterest 长图',
     width: 1000,
     height: 1500,
     aspectRatioLabel: '2:3',
@@ -70,8 +70,8 @@ export const platformPresets: PlatformPreset[] = [
 export const templatePresets: TemplatePreset[] = [
   {
     id: 'clean-title',
-    name: 'Clean title',
-    description: '大标题居中，适合知识博主。',
+    name: '简洁大标题',
+    description: '纯文字居中，适合知识类封面。',
     textSettings: {
       position: 'center',
       align: 'center',
@@ -86,8 +86,8 @@ export const templatePresets: TemplatePreset[] = [
   },
   {
     id: 'bottom-banner',
-    name: 'Bottom banner',
-    description: '底部半透明色块加标题，适合课程封面。',
+    name: '底部横幅',
+    description: '底部深色半透明条，标题集中落在底部。',
     textSettings: {
       position: 'bottom',
       align: 'center',
@@ -97,14 +97,14 @@ export const templatePresets: TemplatePreset[] = [
     overlayStyle: {
       kind: 'bottom-banner',
       color: '#0f172a',
-      opacity: 0.62,
+      opacity: 0.72,
       heightRatio: 0.28,
     },
   },
   {
     id: 'top-hook',
-    name: 'Top hook',
-    description: '顶部大标题，适合短视频封面。',
+    name: '顶部钩子',
+    description: '顶部强对比标题，适合短视频开场钩子。',
     textSettings: {
       position: 'top',
       align: 'left',
@@ -114,8 +114,69 @@ export const templatePresets: TemplatePreset[] = [
     overlayStyle: {
       kind: 'top-fade',
       color: '#111827',
-      opacity: 0.72,
-      heightRatio: 0.34,
+      accentColor: '#ff7a59',
+      badgeText: '吸睛标题',
+      opacity: 0.82,
+      heightRatio: 0.38,
+    },
+  },
+  {
+    id: 'course-cover',
+    name: '课程封面',
+    description: '左上角标签 + 大标题 + 底部署名条。',
+    textSettings: {
+      position: 'center',
+      align: 'left',
+      fontSize: 64,
+      color: '#ffffff',
+    },
+    overlayStyle: {
+      kind: 'corner-label',
+      color: '#0f172a',
+      accentColor: '#ff7a59',
+      badgeText: '课程',
+      signatureText: 'Creator Cover Kit',
+      opacity: 0.56,
+      heightRatio: 0.2,
+    },
+  },
+  {
+    id: 'knowledge-card',
+    name: '知识卡片',
+    description: '白色信息卡片承载标题，适合知识图文封面。',
+    textSettings: {
+      position: 'center',
+      align: 'left',
+      fontSize: 60,
+      color: '#172033',
+    },
+    overlayStyle: {
+      kind: 'center-card',
+      color: '#ffffff',
+      accentColor: '#2f7c85',
+      badgeText: '知识',
+      opacity: 0.92,
+      cardWidthRatio: 0.76,
+    },
+  },
+  {
+    id: 'fitness-cover',
+    name: '健身冲击',
+    description: '强对比冲击样式，带巨大数字背景。',
+    textSettings: {
+      position: 'bottom',
+      align: 'left',
+      fontSize: 72,
+      color: '#ffffff',
+    },
+    overlayStyle: {
+      kind: 'fitness-impact',
+      color: '#050816',
+      accentColor: '#f97316',
+      numberText: '01',
+      badgeText: '健身',
+      opacity: 0.78,
+      heightRatio: 0.48,
     },
   },
 ]
